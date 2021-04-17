@@ -12,15 +12,21 @@ const retrieveCorrectData = (input) => {
       wind,
       clouds,
       dt,
-      sys
+      sys,
+      timezone,
+      id,
+      name
     } = input;
 
-
-    return {
+    var holder = {
+      name,
       weather,
       main,
       sys
     };
+
+
+    return holder;
   }
 
 }

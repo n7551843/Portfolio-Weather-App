@@ -48,4 +48,10 @@ body {
   border: 1px solid rgb(211, 211, 211);
 }
 
+.Weather-pane {
+  height: 250px;
+  border: 2px solid black;
+  margin: 50px auto;
+}
+
 
