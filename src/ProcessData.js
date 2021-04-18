@@ -1,4 +1,3 @@
-import React from 'react';
 
 const retrieveCorrectData = (input) => {
 
@@ -24,7 +23,6 @@ const retrieveCorrectData = (input) => {
       main,
       sys
     };
-
 
     return holder;
   }
