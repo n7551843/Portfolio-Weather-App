@@ -10,8 +10,8 @@ function App() {
   const [weatherData, setWeatherData] = useState(
     {
       name: "",
-      weather: [],
-      main: {},
+      weather: [{icon:""}],
+      main: {temp:""},
       sys: {}
   });
 
@@ -24,11 +24,20 @@ function App() {
   async function fetchData(url) {
     const response = await fetch(url);
     if (response.status !== 200) {
-      alert("This is not a valid location. Please try again.")
+      setWeatherData(prevValue => {
+        var obj = {
+          ...prevValue,
+          name: "Unknown Location"
+        };
+        console.log(obj);
+        return obj;
+      });
+
     } else {
       try {
         const data = await response.json();
         var trimmedData = retrieveCorrectData(data);
+        console.log(trimmedData);
         setWeatherData(trimmedData);
       } catch (error) {
         console.error(error);
