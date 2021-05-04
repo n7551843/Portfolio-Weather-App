@@ -1,6 +1,8 @@
 
 const retrieveCorrectData = (input) => {
 
+  // I used this to unpack and look at the data I got back from the API
+
   if (input !== null) {
     const {
       coord,
